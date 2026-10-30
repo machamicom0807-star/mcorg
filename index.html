@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MCORG — Mail Calendar Organizer</title>
+<meta name="description" content="MCORG は、複数の Gmail と Microsoft アカウントのメール・予定表をまとめて扱う、個人用の Windows デスクトップアプリです。">
+<style>
+:root { --bg:#F3F5F8; --surface:#FFFFFF; --ink:#1B2433; --body:#2A3445; --muted:#5B6576; --line:#E1E6EC; --primary:#3C566A; }
+@media (prefers-color-scheme: dark) { :root { --bg:#0E131B; --surface:#151C27; --ink:#E5EAF1; --body:#C8D0DC; --muted:#98A3B5; --line:#263142; --primary:#A9BED3; } }
+* { box-sizing: border-box; }
+body { margin:0; background:var(--bg); color:var(--ink); font-family:"Yu Gothic UI","Meiryo UI","Segoe UI","Hiragino Sans",sans-serif; line-height:1.8; }
+.wrap { max-width:820px; margin:0 auto; padding:48px 20px 64px; }
+header { display:flex; align-items:center; gap:16px; }
+header svg { width:64px; height:56px; flex-shrink:0; }
+h1 { margin:0; font-size:30px; letter-spacing:.04em; }
+.sub { margin:0; color:var(--muted); letter-spacing:.12em; font-size:12px; }
+section { margin-top:32px; padding:22px 24px; background:var(--surface); border:1px solid var(--line); border-radius:12px; }
+h2 { margin:0 0 8px; font-size:19px; }
+p, li { color:var(--body); }
+ul { padding-left:1.2em; margin:6px 0; }
+a { color:var(--primary); font-weight:600; }
+footer { margin-top:32px; color:var(--muted); font-size:13px; }
+.en { color:var(--muted); font-size:14px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <svg viewBox="4.25 4.25 192.5 168.25" role="img" aria-label="MCORG logo"><path fill="var(--primary)" fill-rule="evenodd" d="M153.44 134.44C153.47 113.5 153.56 96.04 153.63 95.62C153.73 95.06 155.66 92.95 161.62 86.91C165.94 82.54 169.59 79.03 169.74 79.12C169.92 79.23 170 87.52 170 106.01C170 124.65 170.08 132.75 170.26 132.75C170.59 132.75 179.51 123.68 179.93 122.92C180.16 122.5 180.23 114.63 180.24 88.68C180.25 58.86 180.21 54.97 179.87 54.84C179.5 54.69 178.13 56.05 121.75 112.69C110.22 124.27 100.59 133.75 100.36 133.75C100.13 133.75 93.42 127.25 85.45 119.31C77.48 111.37 70.8 104.73 70.6 104.54C70.41 104.36 70.25 104.12 70.25 103.99C70.25 103.64 74.26 99.51 90.12 83.53C127.24 46.15 169.3 4.22 169.57 4.32C169.8 4.39 169.89 7.09 169.94 15.46L170.01 26.51L150.44 46.1C133.37 63.19 105 91.84 96.55 100.52C94.31 102.83 93.77 103.51 93.91 103.9C94.11 104.42 99.35 109.65 100.07 110.04C100.39 110.21 100.7 110.14 101.19 109.78C101.57 109.51 107.56 103.57 114.5 96.58C162.88 47.89 195.85 14.98 196.18 15.05C196.51 15.12 196.55 21.58 196.54 72.3C196.54 114.88 196.46 129.61 196.25 130.01C195.78 130.88 154.15 172.5 153.75 172.5C153.42 172.5 153.38 167.92 153.44 134.44ZM44.07 169.69C42.68 168.28 39.16 164.76 36.27 161.88L31 156.63L31 118.21C31 90.56 31.08 79.73 31.27 79.61C31.64 79.38 46.7 94.39 47.15 95.43C47.44 96.11 47.5 102.26 47.5 134.24C47.5 170.46 47.48 172.25 47.06 172.25C46.81 172.25 45.47 171.1 44.07 169.69ZM14.04 139.93C10.78 136.7 7.53 133.52 6.81 132.86C6.08 132.2 5.27 131.31 5 130.87C4.51 130.09 4.5 129.24 4.44 72.66C4.38 22.01 4.42 15.25 4.75 15.25C4.95 15.25 19.95 30.13 38.08 48.31C75.78 86.13 74.25 84.58 74.25 85.1C74.25 85.69 63.77 96.25 63.18 96.25C62.87 96.25 57.6 91.18 48.57 82.19C29.9 63.59 22.19 55.83 21.93 55.37C21.68 54.92 20.75 54.87 20.75 55.31C20.72 60.99 20.8 144.57 20.83 144.99C20.94 146.56 20.02 145.87 14.04 139.93ZM72.73 68.81C68.01 64.03 60.71 56.69 56.51 52.49C52.31 48.29 44.85 40.8 39.92 35.85L30.96 26.84L30.98 16.11C30.99 10.2 31 5.12 31 4.81C31 3.99 31.55 4.12 32.55 5.19C33.04 5.7 46.84 19.49 63.22 35.81C86.1 58.62 93 65.64 93 66.1C93 66.54 91.66 68.03 87.83 71.86C82.95 76.74 82.11 77.5 81.55 77.5C81.42 77.5 77.45 73.59 72.73 68.81Z"/></svg>
+    <div>
+      <h1>MCORG</h1>
+      <p class="sub">MAIL CALENDAR ORGANIZER</p>
+    </div>
+  </header>
+
+  <section>
+    <h2>MCORG について</h2>
+    <p>MCORG は、複数の Gmail アカウントと Microsoft アカウント（Outlook.com）のメールと予定表を、1つの画面でまとめて扱うための<b>個人用の Windows デスクトップアプリ</b>です。開発者本人が自分のアカウントを管理するために使います。</p>
+    <p class="en">MCORG is a personal Windows desktop app that shows the mail and calendars of several Gmail and Microsoft (Outlook.com) accounts in one window. It is used by its developer to manage their own accounts.</p>
+  </section>
+
+  <section>
+    <h2>主な機能</h2>
+    <ul>
+      <li>複数アカウントの受信箱をまとめて表示、アカウント別・フォルダ（ラベル）別の表示</li>
+      <li>メールの閲覧・送信・整理（既読、ラベル、アーカイブ、削除）</li>
+      <li>年ごとのメールの表示と件数の確認</li>
+      <li>Google カレンダー・Outlook 予定表の表示と予定の作成・変更、通知</li>
+      <li>Gmail のフィルタ・Outlook の仕分けルールの作成・編集</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>データの扱い</h2>
+    <p>メールと予定のデータは Google・Microsoft のサーバーに置いたまま、表示に必要な分だけを取得します。MCORG がメール本文を外部のサーバーに送ることはありません。詳しくは<a href="privacy.html">プライバシーポリシー</a>をご覧ください。</p>
+    <p class="en">Mail and calendar data stay on Google's and Microsoft's servers. MCORG only fetches what it displays and never sends your data to any other server. See the <a href="privacy.html">Privacy Policy</a>.</p>
+  </section>
+
+  <footer>
+    <a href="privacy.html">プライバシーポリシー / Privacy Policy</a>
+  </footer>
+</div>
+</body>
+</html>
